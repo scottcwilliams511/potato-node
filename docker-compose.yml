@@ -1,0 +1,9 @@
+# Use this for testing the dockerized Node.js app locally.
+# Run this to build the image locally: "docker build -t potato-node ."
+
+version: '3'
+
+services:
+  iot-service:
+    image: potato-node
+    restart: always
