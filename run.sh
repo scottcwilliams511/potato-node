@@ -1,1 +1,1 @@
-docker-compose up
+npm start

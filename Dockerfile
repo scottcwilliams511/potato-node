@@ -9,4 +9,4 @@ RUN npm i
 COPY . $APP_DIR
 
 # Starts the service.
-CMD node index.js
+CMD npm start
