@@ -2,20 +2,22 @@
   "name": "potato-node",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/Server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
+    "start": "npm run prod",
     "tsc": "tsc",
-    "dev": "ts-node-dev --respawn --transpileOnly ./app/app.ts",
-    "prod": "tsc && node ./build/app.js"
+    "dev": "ts-node-dev --respawn --transpileOnly ./lib/Server.ts",
+    "prod": "tsc && node ./build/Server.js"
   },
   "author": "Scott Williams and Matthew Bennett",
   "license": "UNLICENCED",
   "dependencies": {
-    "@types/express": "^4.16.1",
-    "express": "^4.16.4",
-    "ts-node-dev": "^1.0.0-pre.32",
-    "typescript": "^3.3.3"
+    "express": "4.16.4"
+  },
+  "devDependencies": {
+    "@types/express": "4.16.1",
+    "ts-node-dev": "1.0.0-pre.32",
+    "typescript": "3.3.3"
   }
 }
