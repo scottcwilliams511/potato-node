@@ -2,12 +2,12 @@
   "name": "potato-node",
   "version": "1.0.0",
   "description": "",
-  "main": "./lib/Server.ts",
+  "main": "Server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run prod",
     "tsc": "tsc",
-    "dev": "ts-node-dev --respawn --transpileOnly ./lib/Server.ts",
+    "dev": "ts-node-dev --respawn --transpileOnly Server.ts",
     "prod": "tsc && node ./build/Server.js"
   },
   "author": "Scott Williams and Matthew Bennett",
