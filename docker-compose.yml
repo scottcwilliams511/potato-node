@@ -7,3 +7,5 @@ services:
   iot-service:
     image: potato-node
     restart: always
+    ports:
+      - "3000:3000"
