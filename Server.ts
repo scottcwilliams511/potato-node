@@ -1,13 +1,13 @@
-// lib/Server.ts
+// Server.ts
 
 import { App } from "./App";
-import { Request } from "./Request";
+import { Request } from "./lib/Request";
 
-async function main() {
+
+(async function () {
     console.log('Hi Bob');
      
     let app: App = new App();
-
 
     app.express.get('/', function(req: any, res: any) {
         res.send('Hello Mom!');
@@ -18,8 +18,6 @@ async function main() {
     });
 
     let request: Request = new Request();
-    let response = await request.getData(new URL('https://pokeapi.co/api/v2/pokemon/ditto/'));
+    let response: object = await request.getData('https://pokeapi.co/api/v2/pokemon/ditto/');
     console.log(response);
-}
-
-main();
+})();

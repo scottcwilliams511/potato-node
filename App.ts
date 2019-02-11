@@ -1,4 +1,4 @@
-// lib/App.ts
+// App.ts
 
 import express = require('express');
 

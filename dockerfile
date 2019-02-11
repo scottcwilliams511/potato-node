@@ -8,7 +8,7 @@ RUN npm i
 # Copy our app.
 COPY . $APP_DIR
 
-run npm build
+RUN npm build
 
 # Starts the service.
 CMD npm start
