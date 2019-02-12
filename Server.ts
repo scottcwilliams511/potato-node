@@ -2,7 +2,7 @@
 
 import { App } from "./App";
 import { Request } from "./lib/Request";
-
+import { Pokemon } from "./Pokemon";
 
 (async function () {
     console.log('Hi Bob');
@@ -18,6 +18,8 @@ import { Request } from "./lib/Request";
     });
 
     let request: Request = new Request();
-    let response: object = await request.getData('https://pokeapi.co/api/v2/pokemon/ditto/');
-    console.log(response);
+    let pokemon: Pokemon = new Pokemon();
+    let response: object = await request.getData('https://pokeapi.co/api/v2/pokemon/charmander/');
+    pokemon.createFile(response);
+    //console.log(response);
 })();
