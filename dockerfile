@@ -8,6 +8,7 @@ RUN npm i
 # Copy our app.
 COPY . $APP_DIR
 
+# Transpile the .ts to .js
 RUN npm build
 
 # Starts the service.
