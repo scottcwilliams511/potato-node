@@ -6,6 +6,7 @@ import { Pokemon } from "./lib/models/Pokemon";
 
 (async function () {
     console.log('Hi Bob');
+    console.log("🐋");
      
     let app: App = new App();
 
