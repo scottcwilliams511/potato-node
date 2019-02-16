@@ -2,7 +2,7 @@
 
 import fs from "fs";
 
-export class Database {
+export class LocalDatabase implements IDatabase {
 
     filePath: string;
 
@@ -10,7 +10,7 @@ export class Database {
         this.filePath = filePath;
     }
 
-    create(json: Object) {
+    create(json: object) {
         console.log(json);
 
         fs.writeFile('./Pokemon.json', JSON.stringify(json, null, 4), function(err: object) {
