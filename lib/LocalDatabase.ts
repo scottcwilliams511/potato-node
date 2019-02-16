@@ -4,13 +4,13 @@ import fs from "fs";
 
 export class LocalDatabase implements IDatabase {
 
-    filePath: string;
+    private filePath: string;
 
-    constructor(filePath: string) {
+    public constructor(filePath: string) {
         this.filePath = filePath;
     }
 
-    create(json: object) {
+    public create(json: object) {
         console.log(json);
 
         fs.writeFile('./Pokemon.json', JSON.stringify(json, null, 4), function(err: object) {

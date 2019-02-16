@@ -6,11 +6,11 @@ import { Request } from "./lib/Request";
 
 export class App {
 
-    express: express.Application;
-    database: IDatabase;
-    httpRequest: Request;
+    public express: express.Application;
+    public database: IDatabase;
+    public httpRequest: Request;
 
-    constructor() {
+    public constructor() {
         // Create a new express application instance
         this.express = express();
         this.database = new LocalDatabase('./Pokemon.json');

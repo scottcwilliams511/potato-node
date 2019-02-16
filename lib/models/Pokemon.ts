@@ -2,10 +2,10 @@
 
 export class Pokemon {
 
-    name: string = "";
-    number: number = 0;
+    public name: string = "";
+    public number: number = 0;
 
-    constructor(pokeJson: any) {
+    public constructor(pokeJson: any) {
         try {
             const json = JSON.parse(pokeJson);
 
